@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+$m: "Montserrat", sans-serif;
+$r: "Roboto", sans-serif;
+
+.one-screen {
+  height: 100vh;
+  background-image: url("../первыйблок.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  &::after {
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.311);
+  }
+  &::before {
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0245ffd4;
+    clip-path: polygon(0 0, 67% 0, 44% 100%, 0% 100%);
+  }
+  .wrapper {
+    z-index: 4;
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .right {
+      transform: translateX(100px);
+      height: 100%;
+      flex: 1;
+      .logo-wrp {
+        padding-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .logo {
+        height: 70px;
+      }
+      .blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 400px;
+        margin: 170px auto;
+        grid-gap: 30px;
+        width: 400px;
+        transform: rotate(45deg);
+        animation-name: rotateBlocksWrapper;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 100s;
+        .items {
+          border-radius: 30px;
+          background: #0044ff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            text-align: center;
+            font-family: $m;
+            color: white;
+            font-size: 23px;
+            font-weight: 600;
+            transform: rotate(-45deg);
+            animation-name: rotateBlocks;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 100s;
+          }
+        }
+      }
+    }
+    .left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        font-family: $m;
+        color: white;
+        font-size: 50px;
+        span {
+          cursor: pointer;
+          color: #0245ffd4;
+          background: white;
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      }
+      form {
+        .send {
+          height: 80px;
+          font-family: $m;
+          border-radius: 10px;
+          font-size: 30px;
+          color: white;
+          cursor: pointer;
+          font-weight: 700;
+          background: transparent;
+          border: 2px solid white;
+          animation-name: sended;
+          animation-play-state: paused;
+          animation-duration: 2s;
+          animation-fill-mode: forwards;
+          transition-duration: .3s;
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+          
+        }
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input {
+          width: 80%;
+          height: 80px;
+          outline: none;
+          border: none;
+          border-radius: 10px;
+          margin-bottom: 28px;
+        }
+        .txt {
+          padding-left: 20px;
+          font-family: $m;
+          font-size: 30px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@keyframes sendBtn {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotateBlocks {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-425deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes rotateBlocksWrapper {
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(425deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+
+@keyframes sended{
+    0%{
+        background: transparent;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+    }
+    40%{
+        background: white;
+        
+    }
+    50%{
+        clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+        width: 200px;
+        height: 200px;
+        color: transparent;
+        transform: rotate(45deg);
+        background: white;
+    }
+    75%{
+        transform: rotate(45deg)  translateY(-1500px);
+        background: white;
+        clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+        opacity: 1;
+        background: white;
+        width: 200px;
+        height: 200px;
+    }
+    100%{
+        background: white; 
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        transform: rotate(45deg)  translateY(-1500px);
+        clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+    }
+}
+
+.send-wp{
+    height: 100px;
+    position: relative;
+    width: 100%;
+}
+
+main{
+    overflow-x: hidden;
+}
+
+.second-screen{
+    height: 100vh;
+}
+.sended-text{
+    opacity: 0;
+    pointer-events: none;
+    color: white;
+    font-family: $m;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    transition-duration: .3s;
+    transition-delay: 1.5s;
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    width: max-content;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.sended-text-activated{
+    opacity: 1;
+    top: 50%;
+}

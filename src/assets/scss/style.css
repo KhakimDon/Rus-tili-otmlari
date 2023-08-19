@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.one-screen {
+  height: 100vh;
+  background-image: url("../первыйблок.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+}
+.one-screen::after {
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.311);
+}
+.one-screen::before {
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(2, 69, 255, 0.831372549);
+  -webkit-clip-path: polygon(0 0, 67% 0, 44% 100%, 0% 100%);
+          clip-path: polygon(0 0, 67% 0, 44% 100%, 0% 100%);
+}
+.one-screen .wrapper {
+  z-index: 4;
+  position: relative;
+  max-width: 1500px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.one-screen .wrapper .right {
+  transform: translateX(100px);
+  height: 100%;
+  flex: 1;
+}
+.one-screen .wrapper .right .logo-wrp {
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+.one-screen .wrapper .right .logo {
+  height: 70px;
+}
+.one-screen .wrapper .right .blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 400px;
+  margin: 170px auto;
+  grid-gap: 30px;
+  width: 400px;
+  transform: rotate(45deg);
+  -webkit-animation-name: rotateBlocksWrapper;
+          animation-name: rotateBlocksWrapper;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+}
+.one-screen .wrapper .right .blocks .items {
+  border-radius: 30px;
+  background: #0044ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.one-screen .wrapper .right .blocks .items span {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  transform: rotate(-45deg);
+  -webkit-animation-name: rotateBlocks;
+          animation-name: rotateBlocks;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+}
+.one-screen .wrapper .left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.one-screen .wrapper .left h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 50px;
+}
+.one-screen .wrapper .left h1 span {
+  cursor: pointer;
+  color: rgba(2, 69, 255, 0.831372549);
+  background: white;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.one-screen .wrapper .left form {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.one-screen .wrapper .left form .send {
+  height: 80px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  background: transparent;
+  border: 2px solid white;
+  -webkit-animation-name: sended;
+          animation-name: sended;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition-duration: 0.3s;
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+}
+.one-screen .wrapper .left form input {
+  width: 80%;
+  height: 80px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+.one-screen .wrapper .left form .txt {
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@-webkit-keyframes sendBtn {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes sendBtn {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes rotateBlocks {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-425deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes rotateBlocks {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-425deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes rotateBlocksWrapper {
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(425deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+@keyframes rotateBlocksWrapper {
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(425deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+@-webkit-keyframes sended {
+  0% {
+    background: transparent;
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+  }
+  40% {
+    background: white;
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+            clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+    width: 200px;
+    height: 200px;
+    color: transparent;
+    transform: rotate(45deg);
+    background: white;
+  }
+  75% {
+    transform: rotate(45deg) translateY(-1500px);
+    background: white;
+    -webkit-clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+            clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+    opacity: 1;
+    background: white;
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    background: white;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transform: rotate(45deg) translateY(-1500px);
+    -webkit-clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+            clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+  }
+}
+@keyframes sended {
+  0% {
+    background: transparent;
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 23% 100%, 0 100%, 0 0);
+  }
+  40% {
+    background: white;
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+            clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+    width: 200px;
+    height: 200px;
+    color: transparent;
+    transform: rotate(45deg);
+    background: white;
+  }
+  75% {
+    transform: rotate(45deg) translateY(-1500px);
+    background: white;
+    -webkit-clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+            clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+    opacity: 1;
+    background: white;
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    background: white;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transform: rotate(45deg) translateY(-1500px);
+    -webkit-clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+            clip-path: polygon(50% 0, 79% 63%, 54% 63%, 50% 43%, 47% 63%, 20% 63%);
+  }
+}
+.send-wp {
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.second-screen {
+  height: 100vh;
+}
+
+.sended-text {
+  opacity: 0;
+  pointer-events: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-delay: 1.5s;
+  position: absolute;
+  left: 40%;
+  top: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.sended-text-activated {
+  opacity: 1;
+  top: 50%;
+}/*# sourceMappingURL=style.css.map */
