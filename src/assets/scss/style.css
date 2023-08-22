@@ -10,6 +10,7 @@
   height: 100vh;
   background-image: url("../первыйблок.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed !important;
   background-size: cover;
   position: relative;
   background-position: center center;
@@ -315,10 +316,6 @@ main {
   overflow-x: hidden;
 }
 
-.second-screen {
-  height: 100vh;
-}
-
 .sended-text {
   opacity: 0;
   pointer-events: none;
@@ -341,4 +338,358 @@ main {
 .sended-text-activated {
   opacity: 1;
   top: 50%;
+}
+
+@media screen and (max-width: 1440px) {
+  .one-screen .wrapper {
+    max-width: 80% !important;
+  }
+  .one-screen .wrapper .left h1 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  .one-screen .wrapper .left form input {
+    width: 70%;
+    height: 61px;
+  }
+  .one-screen .wrapper .left form .txt {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .one-screen .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .one-screen .wrapper .left {
+    width: 100%;
+  }
+  .one-screen .wrapper .right {
+    width: 100%;
+    position: initial;
+  }
+  .one-screen .wrapper .right .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+.mobile-logo {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .one-screen::before {
+    -webkit-clip-path: polygon(0 0, 100% 0, 99% 0, 100% 0, 100% 54%, 0 54%);
+            clip-path: polygon(0 0, 100% 0, 99% 0, 100% 0, 100% 54%, 0 54%);
+  }
+  .one-screen {
+    height: 150vh;
+  }
+  .mobile-logo {
+    z-index: 909;
+    display: block;
+    right: 30px;
+    top: 20px;
+    position: absolute;
+    background: white;
+  }
+  .mobile-logo img {
+    height: 40px;
+  }
+  .one-screen .wrapper .left form input {
+    width: 100%;
+  }
+  .one-screen .wrapper .left {
+    padding-top: 100px;
+  }
+  .one-screen .wrapper .left h1 {
+    line-height: 58px;
+  }
+  .one-screen .wrapper .right {
+    transform: translateX(0px);
+  }
+  .one-screen .wrapper .right .logo {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .one-screen .wrapper {
+    max-width: 90% !important;
+    width: 90% !important;
+  }
+  .one-screen .wrapper .left h1 {
+    font-size: 35px;
+  }
+  .one-screen .wrapper .left h1 {
+    line-height: 47px;
+  }
+  .one-screen .wrapper .right {
+    transform: scale(0.8);
+  }
+  .sended-text {
+    left: 50% !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .one-screen {
+    height: 1300px;
+  }
+  .one-screen .wrapper .right {
+    transform: scale(0.6) translateX(-40px);
+  }
+  .mobile-logo {
+    padding: 5px;
+  }
+  .one-screen .wrapper .left h1 {
+    font-size: 6.8vw;
+  }
+  .one-screen .wrapper .left form input {
+    height: 53px;
+  }
+  .one-screen .wrapper .left form input {
+    margin-bottom: 10px;
+  }
+  .sended-text {
+    font-size: 22px !important;
+  }
+  .one-screen .wrapper .left form .send {
+    font-size: 6vw !important;
+  }
+}
+.second-screen .wrapper {
+  max-width: 1500px;
+  padding: 150px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.second-screen .wrapper .left {
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-screen .wrapper .left p,
+.second-screen .wrapper .left h1 {
+  font-family: "Montserrat", sans-serif;
+}
+.second-screen .wrapper .left h1 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #0246ff;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(2, 69, 255, 0.4941176471);
+  margin-bottom: 20px;
+  font-size: 45px;
+}
+.second-screen .wrapper .left h1 svg {
+  height: 30px;
+}
+.second-screen .wrapper .left p {
+  font-size: 20px;
+  line-height: 35px;
+}
+.second-screen .wrapper .left p svg {
+  height: 30px;
+  margin: 10px 8px;
+  color: #0246ff;
+}
+.second-screen .wrapper .left p span {
+  color: #0246ff;
+}
+.second-screen .wrapper .right {
+  width: 670px;
+  display: flex;
+  padding-top: 60px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.second-screen .wrapper .right .block {
+  height: 188px;
+  width: 188px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 10px 10px 20px rgb(223, 223, 223);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.second-screen .wrapper .right .block svg {
+  color: #0044ff;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1500px) {
+  .second-screen .wrapper {
+    max-width: 1380px;
+  }
+}
+@media screen and (max-width: 1380px) {
+  .second-screen .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-screen .wrapper .right .block {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .second-screen .wrapper .right {
+    width: 90%;
+  }
+  .second-screen .wrapper .left {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .second-screen .wrapper .left p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .second-screen .wrapper .left h1 {
+    font-size: 33px;
+  }
+  .second-screen .wrapper .left h1 svg, .second-screen .wrapper .left p svg {
+    height: 24px;
+  }
+  .second-screen .wrapper .right .block svg {
+    height: 60px;
+  }
+  .second-screen .wrapper .right .block {
+    padding: 0px;
+  }
+  .second-screen .wrapper .right .block {
+    height: initial;
+    width: initial;
+  }
+  .second-screen .wrapper .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .second-screen .wrapper .right .block {
+    padding: 30px 0px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .second-screen .wrapper .left p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .second-screen .wrapper {
+    padding: 109px 0px;
+  }
+}
+.slider-wrapper {
+  height: 900px;
+  position: relative;
+  background: #0246ff;
+}
+
+.content {
+  flex-direction: column;
+  max-width: 1500px;
+  justify-content: center;
+}
+.content h2 {
+  color: white;
+  font-size: 45px;
+  text-align: start;
+  font-family: "Montserrat", sans-serif;
+}
+.content p {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  width: 50%;
+  margin-bottom: 20px;
+  text-align: start;
+}
+.content button {
+  width: 250px;
+  height: 60px;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.content button:hover {
+  box-shadow: 0 0 20px white;
+  transform: translateY(-20px);
+}
+
+.questions {
+  padding: 233px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.questions h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  color: #0044ff;
+}
+.questions .wrapper {
+  padding-top: 121px;
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.questions .wrapper .left {
+  padding: 100px 50px;
+  width: 590px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #0044ff;
+  border-radius: 20px;
+  text-align: center;
+}
+.questions .wrapper .left button {
+  background: #0044ff;
+  height: 60px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+.questions .wrapper .left button:hover {
+  transform: translateY(-10px);
+}
+.questions .wrapper .left img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+.questions .wrapper .left h2 {
+  font-size: 25px;
+}
+.questions .wrapper .right {
+  margin-left: 176px;
+  width: 590px;
+  height: 100%;
+  background: blue;
 }/*# sourceMappingURL=style.css.map */
