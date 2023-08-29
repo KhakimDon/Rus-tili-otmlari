@@ -5,7 +5,7 @@
         <swiper-slide>
             <div class="rotate-block"></div>
             <div class="content">
-                <h2>Moskva davlat universitetining filiali M. V. Lomonosov</h2>
+                <h2>Moskva davlat M. V. Lomonosov <br> nomidagi Universitet  </h2>
                 <p>
                     Rossiyaning eng qadimgi va eng yirik klassik universitetlaridan biri, Moskvada joylashgan Rossiya fan va madaniyati markazlaridan biri. 1940 yildan Mixail Vasilievich Lomonosov nomini olgan
                 </p>
