@@ -590,6 +590,9 @@ main {
       border: 2px solid #0044ff;
       border-radius: 20px;
       text-align: center;
+      a{
+        width: 100%;
+      }
       button{
         background: #0044ff;
         height: 60px;
@@ -619,7 +622,134 @@ main {
       margin-left: 176px;
       width: 590px;
       height: 100%;
-      background: blue;
+      .question{  
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 30px; 
+        border: 2px solid #0044ff;
+        margin-bottom: 20px;
+        font-weight: 600;
+        height: 70px;
+        font-size: 23px;
+        cursor: pointer;
+        border-radius: 20px;
+        transition-duration: .3s;
+        color: #0044ff; 
+        font-family: $m;
+        p{
+          margin-top: 20px;
+        }
+        &:hover{
+          transform: translateY(-5px);
+          box-shadow:  5px 5px 10px #0044ff7d;
+        }
+      }
+    }
+  }
+}
+
+
+.screen{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around  ;
+  background: gray;
+}
+
+
+.weeks{
+  width: 210px;
+  overflow: hidden;
+  background: gray;
+  height: 100%;
+  display: grid;
+  grid-template-columns:  1fr 28px 28px;
+  grid-template-rows: repeat(22,1fr);
+  grid-gap: 10px;
+
+  .blocks{
+    background: lime;
+    border: 1px solid black;
+    &:nth-child(3n){
+      background: yellow;
+    }
+    &:nth-child(3n + 2  ){
+      background: orangered;
+    }
+  }
+
+}
+
+
+
+
+
+.rotate-block{
+  clip-path: polygon(20% 0%, 80% 0%, 71% 0, 43% 100%, 12% 100%, 20% 100%, 0 100%, 0 0);
+  height: 100%;
+  width: 100%;
+  background: #0245ffd4;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  top: 0;
+}
+
+
+footer{
+  height: 404px;
+  background: #0246FF;
+  .wrapper{
+    max-width: 1500px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div{
+      img{
+        height: 70px;
+        background: white;
+        padding: 2px;
+        
+      }
+    }
+    ul{
+      list-style-type: none;
+      line-height: 30px;
+      li{
+        &:nth-child(1){
+          background: red;
+          background: transparent;
+          a{
+            color: white;
+          }
+        }
+        margin-bottom: 30px;
+        background: white;
+        
+        border-radius: 5px;
+        a{
+          height: 100%;
+          padding: 5px 25px;
+          display: block;
+          width: 100%;
+          cursor: pointer;
+          font-family: $m;
+          text-decoration: none;
+          color: black;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          svg{
+            margin-right: 10px;
+          }
+          img{
+            margin-left: 10px;
+            height: 20px;
+          }
+        }
+      }
     }
   }
 }

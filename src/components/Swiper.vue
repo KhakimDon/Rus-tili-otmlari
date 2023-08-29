@@ -3,15 +3,17 @@
         type: 'fraction',
     }" :navigation="true" :modules="modules" class="mySwiper">
         <swiper-slide>
+            <div class="rotate-block"></div>
             <div class="content">
-                <h2>Lorem ipsum dolor si Lorem, <br> ipsum dolor.</h2>
+                <h2>Moskva davlat universitetining filiali M. V. Lomonosov</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio amet culpa voluptate, fuga iure? Tempore sunt animi sed saepe et, dicta magni beatae veniam corporis sit ipsam eos soluta eveniet consectetur inventore? Minima ipsa quidem, assumenda veniam asperiores numquam.
+                    Rossiyaning eng qadimgi va eng yirik klassik universitetlaridan biri, Moskvada joylashgan Rossiya fan va madaniyati markazlaridan biri. 1940 yildan Mixail Vasilievich Lomonosov nomini olgan
                 </p>
-                <button>click this</button>
+                <button>Batafsil</button>
             </div>
         </swiper-slide>
         <swiper-slide>
+            <div class="rotate-block"></div>
             <div class="content">
                 <h2>Lorem ipsum dolor sit Lorem, <br> ipsum dolor</h2>
                 <p>
@@ -21,6 +23,7 @@
             </div>
         </swiper-slide>
         <swiper-slide>
+            <div class="rotate-block"></div>
             <div class="content">
                 <h2>Lorem ipsum dolor sit Lorem,<br>  ipsum dolor</h2>
                 <p>
@@ -30,6 +33,7 @@
             </div>
         </swiper-slide>
         <swiper-slide>
+            <div class="rotate-block"></div>
             <div class="content">
                 <h2>Lorem ipsum dolor sit Lorem, <br> ipsum dolor</h2>
                 <p>

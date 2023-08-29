@@ -1,6 +1,11 @@
 <script>
 import Swiper from "../components/Swiper.vue"
 export default {
+  data(){
+    return{
+      ch  : []
+    }
+  },
   methods: {
     sending() {
       let btn = document.querySelector(".send");
@@ -8,9 +13,29 @@ export default {
       btn.style.animationPlayState = "running";
       sendedtext.classList.add("sended-text-activated");
     },
+    showAns(){
+      
+      let dates = document.querySelectorAll(".question")
+      for(let i of dates){
+        console.log(i);
+        i.dataset.open = "false"
+        i.style.height = 70 + 'px'
+      }
+
+      if(event.currentTarget.dataset.open == "false"){
+        event.currentTarget.dataset.open = "true"
+        event.currentTarget.style.height = (event.currentTarget.children[1].getBoundingClientRect().height + 100) + "px"
+
+      }else if(event.currentTarget.dataset.open == "true"){
+        event.currentTarget.dataset.open = "false"
+        event.currentTarget.style.height = 70 + 'px'
+      }
+    }
+  },
+  mounted(){
   },
   components:{
-    Swiper
+    Swiper,
   }
 };
 </script>
@@ -26,7 +51,7 @@ export default {
           <h1>
             ASSALOMU ALEYKUM !
             <br />
-            <span> @Rossiya_OTMlari</span>
+            <span class="font-[600]"> @Rossiya_OTMlari</span>
             telegram <br />
             kanalining rasmiy saytiga xush kelibsiz.
           </h1>
@@ -162,14 +187,61 @@ feedbacks
         <div class="left">
           <img src="../assets/logo-5000pix.png" alt="">
           <h2>Telegram kanalimizga a`zo bo`ling va barcha yangilioklardan xabardor bo`ling !</h2>
-          <button>Kanalga a'zo b`lish</button>
+          <a href="https://t.me/Rossiya_OTMlari"><button>Kanalga a'zo bo`lish</button></a>
+          
         </div>
-        <div class="right">asds</div>
+        <div class="right">
+          <div style="height: 200px;" data-open="true" @click="showAns()" class="question">
+            <span>Nechta universitet mavjud ? 🤔</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid, officia, quos perspiciatis pariatur dolor quasi.</p>
+          </div>
+          <div data-open="false" @click="showAns()" class="question">
+            <span>O'qishga borish nechpul ? 💵</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid, officia, quos perspiciatis pariatur dolor quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, deserunt.</p>
+          </div>
+          <div data-open="false" @click="showAns()" class="question">
+            <span>Kontrakni bo'lib to'lasa bo'ladimi ? 🏦</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid, officia, quos perspiciatis pariatur dolor quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, deserunt.</p>
+          </div>
+          <div data-open="false" @click="showAns()" class="question">
+            <span>Qanaqa dokumentlar kerak ? 📄</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid, officia, quos perspiciatis pariatur dolor quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, deserunt.</p>
+          </div>
+          <div data-open="false" @click="showAns()" class="question">
+            <span>Garantiya bormi ? 💯</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid, officia, quos perspiciatis pariatur dolor quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, deserunt.</p>
+          </div>
+        </div>
       </div>
 
     </section>
 
   </main>
+  <footer>
+    <div class="wrapper">
+      <div>
+        <img src="../assets/logo-5000pix.png" alt="">
+      </div>
+      <ul>
+        <li><a href="#">Socials :</a></li>
+        <li><a href="">Telegram<img src="../assets/tg.png" alt=""></a></li>
+        <li><a href="https://youtube.com/@Rossiya_OTMlari?si=UitUdv4G3U8of-9-">You tube<img src="../assets/inst.png" alt=""></a></li>
+      </ul>
+      <ul>
+        <li><a href="">Contacts :</a></li>
+        <li><a href="tel:+998915491754">
+          <svg height="20" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="black" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>+998 (91) 549-17-54</a></li>
+        <li><a href="tel:+7 966 865 2020">
+          <svg height="20" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="black" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>+7 966 865 2020</a></li>
+      </ul>
+      <ul>
+        <li><a href="">Bepul darsliklar : </a></li>
+        <li><a href="https://t.me/Rossiya_OTMlari_admin">👉 Rus tilidan darslik</a></li>
+        <li style="opacity:0; pointer-events: none;"><a href="">Contacts</a></li>
+      </ul>
+      
+    </div>
+  </footer>
 </template>
 <style>
 

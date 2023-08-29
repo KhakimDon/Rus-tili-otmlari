@@ -1,85 +1,270 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
-  
-  .swiper {
-    width: 100%;
-    height: 100%;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed !important;
+
+  /* Center slide text vertically */
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 6 !important;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  display: flex;
+  margin: auto;
+}
+
+.swiper-slide:nth-child(1) {
+  background-attachment: fixed !important;
+  background-image: url("https://funart.pro/uploads/posts/2019-11/1573380230_mgu-universitet-rossija-25.jpg");
+}
+.swiper-slide:nth-child(2) {
+  background-attachment: fixed !important;
+  background-image: url("https://s2.stc.all.kpcdn.net/putevoditel/projectid_534672/images/tild6635-6230-4532-b061-366534646166__photo.jpg");
+}
+.swiper-slide:nth-child(3) {
+  background-attachment: fixed !important;
+  background-image: url("https://chronicles.igmsu.org/wp-content/uploads/2016/08/2gum.jpg");
+}
+
+.swiper-slide:nth-child(4) {
+  background-attachment: fixed !important;
+  background-image: url("https://avatars.mds.yandex.net/get-altay/2786941/2a00000172403bac6b37c94b364b70e45c1c/XXL_height");
+}
+
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+  width: 100%;
+  opacity: 82%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  background: #0245ffd4;
+  width: max-content;
+  color: white;
+  font-family: Roboto;
+  position: absolute;
+  right: 40px !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 40px !important;
+  left: initial !important;
+}
+
+@media screen and (max-width: 1500px) {
+  .content {
+    max-width: 85%;
   }
-  
-  .swiper-slide {
+  .questions .wrapper,
+  footer .wrapper {
+    max-width: 85% !important;
+  }
+}
+
+/*  */
+@media screen and (max-width: 1024px) {
+  .questions .wrapper .right {
+    margin-left: 0px;
+    margin-top: 20px;
+    order: -1;
+    flex: 1 !important;
+  }
+  .questions .wrapper .left {
+    flex: 1 !important;
+  }
+  .questions .wrapper {
+    padding-top: 45px;
+    flex-direction: column;
+  }
+  .questions h2 {
+    width: 70%;
     text-align: center;
+  }
+  .rotate-block {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+  }
+  .content p {
+    width: 100%;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    background: white;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .questions h2 {
+    font-size: 28px;
+  }
+  .questions .wrapper .right .question {
+  }
+  .questions .wrapper {
+    width: 95% !important;
+  }
+  .questions .wrapper .right .question {
+    font-size: 3.6vw !important;
+    white-space: nowrap;
+  }
+  .questions {
+    padding-top: 103px !important;
+  }
+  .questions .wrapper .right,
+  .questions .wrapper .left {
+    width: 100% !important;
+  }
+  .questions .wrapper .left img {
+    height: 65px;
+  }
+  .questions .wrapper .left h2 {
+    width: 100%;
     font-size: 18px;
-    background: #fff;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed !important;
-  
-    /* Center slide text vertically */
+  }
+  .questions .wrapper {
+    padding-top: 30px;
+  }
+  .questions .wrapper .left {
+    padding: 44px 50px;
+  }
+  .content h2 {
+    font-size: 28px;
+  }
+  .questions .wrapper .right .question {
+    font-size: 18px;
+  }
+  .slider-wrapper {
+    height: 640px;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    background: white;
+    padding: 5px;
+    position: absolute !important;
+    bottom: 0 !important;
+  }
+  .swiper-button-next:after {
+    transform: translateY(270px) translateX(-200%) scaley(0.8);
+    border-radius: 5px;
+  }
+  .swiper-button-prev:after {
+    transform: translateY(270px) translateX(200%) scaley(0.8);
+    border-radius: 5px;
+  }
+  .swiper-pagination {
+    background: white;
+    color: blue;
+    right: 50% !important;
+    transform: translateX(50%);
+  }
+  .content p {
+    font-size: 14px;
+  }
+  .content button {
+    width: 191px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .questions .wrapper .right .question p {
+    white-space: wrap !important;
+  }
+  .questions .wrapper .left img {
+    height: 45px;
+  }
+  .questions .wrapper .left h2 {
+    font-family: 16px;
+  }
+  .questions .wrapper .left button {
+    background: #0044ff;
+    height: 54px;
+    width: 92%;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    border-radius: 10px;
+    border: none;
+  }
+  .questions .wrapper .right .question {
+    border-bottom: 8px solid #0044ff !important;
+  }
+}
+
+@media screen and (max-width: 1095px) {
+  footer {
+    padding: 30px 0px;
+  }
+  footer .wrapper {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  footer .wrapper ul {
     display: flex;
-    position: relative;
+  }
+  footer .wrapper div {
+    align-self: center !important;
+  }
+  footer .wrapper ul li {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 754px) {
+  footer {
+    height: max-content;
+  }
+  footer .wrapper ul li:nth-child(1) {
+    display: none;
+  }
+  footer .wrapper ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
+    align-items: center !important;
+  }
+  footer .wrapper div {
+    margin: 0 0 20px 0px;
+    align-self: center !important;
+  }
+  .questions {
+    padding: 128px 0px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
-
-  .content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 6;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    display: flex;
-    margin: auto;
-  }
-
-  .swiper-slide:nth-child(1){
-    background-attachment: fixed !important;
-    background-image: url("https://funart.pro/uploads/posts/2019-11/1573380230_mgu-universitet-rossija-25.jpg");
-  }
-  .swiper-slide:nth-child(2){
-    background-attachment: fixed !important;
-    background-image: url("https://s2.stc.all.kpcdn.net/putevoditel/projectid_534672/images/tild6635-6230-4532-b061-366534646166__photo.jpg");
-  }
-  .swiper-slide:nth-child(3){
-    background-attachment: fixed !important;
-    background-image: url("https://chronicles.igmsu.org/wp-content/uploads/2016/08/2gum.jpg");
-  }
-  
-  .swiper-slide:nth-child(4){
-    background-attachment: fixed !important;
-    background-image: url("https://avatars.mds.yandex.net/get-altay/2786941/2a00000172403bac6b37c94b364b70e45c1c/XXL_height");
-  }
-  
-  .swiper-slide::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #0246FF;
-    opacity: 82%;
-    z-index: 1;
-    clip-path: polygon(20% 0%, 80% 0%, 71% 0, 43% 100%, 12% 100%, 20% 100%, 0 100%, 0 0);
-  }
-  
-  .swiper-slide::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    z-index: 0;
-    width: 100%;
-    opacity: 82%;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-
-  
+}
