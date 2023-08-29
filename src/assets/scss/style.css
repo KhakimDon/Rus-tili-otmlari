@@ -6,8 +6,14 @@
   box-sizing: border-box;
 }
 
+main, footer {
+  max-width: 1920px;
+  margin: auto;
+}
+
 .one-screen {
   height: 100vh;
+  max-height: 1000px;
   background-image: url("../первыйблок.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed !important;
