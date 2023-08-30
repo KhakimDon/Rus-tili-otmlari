@@ -9,7 +9,7 @@
                 <p>
                     Rossiyaning eng qadimgi va eng yirik klassik universitetlaridan biri, Moskvada joylashgan Rossiya fan va madaniyati markazlaridan biri. 1940 yildan Mixail Vasilievich Lomonosov nomini olgan
                 </p>
-                <button>Batafsil</button>
+                <button @click="emits()">Batafsil</button>
             </div>
         </swiper-slide>
         <swiper-slide>
@@ -63,6 +63,11 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
+    },
+    methods:{
+        emits(){
+            this.$emit("openmodal")
+        }
     },
     setup() {
         return {

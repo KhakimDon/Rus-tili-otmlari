@@ -13,7 +13,7 @@ main, footer {
 
 .one-screen {
   height: 100vh;
-  max-height: 1000px;
+  max-height: 1500px;
   background-image: url("../первыйблок.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed !important;
@@ -816,4 +816,193 @@ footer .wrapper ul li a svg {
 footer .wrapper ul li a img {
   margin-left: 10px;
   height: 20px;
+}
+
+.univers_menu {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 999;
+  pointer-events: none;
+  transition-duration: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.univers_menu_active {
+  pointer-events: fill !important;
+}
+.univers_menu_active h2 {
+  opacity: 1 !important;
+  transform: translateX(0%) !important;
+  letter-spacing: 0px !important;
+  transition-delay: 0.3s;
+}
+
+.univers_menu_inner {
+  border-radius: 20px;
+  height: 800px;
+  position: relative;
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.univers_menu_inner h2 {
+  transition-duration: 1s;
+  transform: translateX(-100%);
+  font-size: 35px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #0044ff;
+  white-space: nowrap;
+  opacity: 0;
+}
+.univers_menu_inner h2 span {
+  cursor: pointer;
+}
+.univers_menu_inner .items {
+  transform: translateX(-150%);
+  margin-top: 20px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  border: 2px solid #0044ff;
+  cursor: pointer;
+}
+.univers_menu_inner .items .bottom {
+  height: 0px;
+  width: 100%;
+  transition-duration: 0.3s;
+}
+.univers_menu_inner .items .bottom figure {
+  height: 100px;
+  transition-duration: 0.3s;
+  width: 200px;
+  transform: translateY(-110px) translateX(17vw);
+  border-radius: 10px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("https://files.vgtimes.ru/posts/2023-03/1677671979_1.jpg");
+  margin: 20px auto;
+  margin-top: 0px !important;
+}
+.univers_menu_inner .items .bottom ul {
+  width: 90%;
+  margin: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.univers_menu_inner .items .bottom ul li {
+  margin: 5px;
+  border: 2px solid #0044ff;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  background: white;
+  color: #0044ff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 150px;
+}
+.univers_menu_inner .items .bottom ul li:nth-child(2n) {
+  background: #0044ff;
+  color: white;
+}
+.univers_menu_inner .items .top {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+.univers_menu_inner .items .top h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #0044ff;
+  margin-right: 60px;
+  max-width: 400px;
+  font-size: 20px;
+}
+.univers_menu_inner .rightactive {
+  transform: translate(0px);
+}
+.univers_menu_inner .itemsactive {
+  border-bottom: 5px solid #0044ff;
+}
+.univers_menu_inner .itemsactive .bottom {
+  height: 460px;
+  width: 100%;
+}
+.univers_menu_inner .itemsactive .bottom figure {
+  height: 200px;
+  transform: translate(0px);
+  width: 90%;
+  border-radius: 10px;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("https://files.vgtimes.ru/posts/2023-03/1677671979_1.jpg");
+  margin: 20px auto;
+  margin-top: 0px !important;
+}
+
+.univers_menu_inner_back {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  left: 50%;
+  z-index: -1;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: white;
+  transition-duration: 0.5s;
+}
+
+.univers_menu_inner_back_active_height {
+  width: 10%;
+  height: 800px;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+}
+
+.univers_menu_inner_back_active_width {
+  width: 1000px;
+  transition-duration: 1s;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* в основном для вертикальных полос прокрутки */
+  height: 10px; /* в основном для горизонтальных полос прокрутки */
+}
+
+::-webkit-scrollbar-thumb { /* плашка-бегунок */
+  background: transparent;
+  border-radius: 200px;
+}
+
+::-webkit-scrollbar-track { /* фон */
+  background: transparent;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

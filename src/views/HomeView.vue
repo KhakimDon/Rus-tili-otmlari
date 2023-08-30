@@ -3,15 +3,78 @@ import Swiper from "../components/Swiper.vue"
 export default {
   data(){
     return{
-      ch  : []
+      ch  : [],
+      univers_menu: false,
     }
   },
   methods: {
+    close(){
+      let blocksitems= document.querySelectorAll(".blocks-items")
+      let count = 0
+        let int = setInterval(() => {
+        blocksitems[count].classList.remove("rightactive")
+        count++
+        }, 100);
+      let menu = document.querySelector(".univers_menu")
+      let univers_menu_inner_back = document.querySelector(".univers_menu_inner_back")
+      if(this.univers_menu == true){
+
+        univers_menu_inner_back.classList.remove("univers_menu_inner_back_active_height")
+        setTimeout(() => {
+          univers_menu_inner_back.classList.remove("univers_menu_inner_back_active_width")
+        }, 300);
+
+        menu.classList.remove("univers_menu_active")
+        setTimeout(() => {
+            menu.style.background = "transparent"
+            menu.style.backdropFilter = "none"
+
+        }, 0);
+        this.univers_menu = false
+      }
+    },
+    open_univers_popup(){
+      let blocksitems= document.querySelectorAll(".blocks-items")
+      let count = 0
+      setTimeout(() => {
+        let int = setInterval(() => {
+        blocksitems[count].classList.add("rightactive")
+        count++
+      }, 300);
+      }, 1000);
+      let menu = document.querySelector(".univers_menu")
+      let univers_menu_inner_back = document.querySelector(".univers_menu_inner_back")
+      if(this.univers_menu == false){
+
+        univers_menu_inner_back.classList.add("univers_menu_inner_back_active_height")
+        setTimeout(() => {
+          univers_menu_inner_back.classList.add("univers_menu_inner_back_active_width")
+        }, 300);
+
+        menu.classList.add("univers_menu_active")
+        setTimeout(() => {
+            menu.style.background = "rgba(255, 255, 255, 0.454)"
+            menu.style.backdropFilter = "blur(10px)"
+
+        }, 1000);
+        this.univers_menu = true
+      }
+    },
     sending() {
       let btn = document.querySelector(".send");
       let sendedtext = document.querySelector(".sended-text");
       btn.style.animationPlayState = "running";
       sendedtext.classList.add("sended-text-activated");
+    },
+    
+    openFacultate(){
+      if(event.currentTarget.dataset.opens == "false"){
+        event.currentTarget.classList.add("itemsactive")
+        event.currentTarget.dataset.opens = "true"
+      }else{
+        event.currentTarget.dataset.opens = "false"
+        event.currentTarget.classList.remove("itemsactive")
+      }
     },
     showAns(){
       
@@ -41,6 +104,111 @@ export default {
 </script>
 
 <template>
+  <div class="univers_menu">
+    <div class="univers_menu_inner_back"></div>
+    <div class="univers_menu_inner">
+      <h2>Rossiyanig eng nufuzli universitetlari.🎓 <span @click="close">&times;</span></h2>
+      <div>
+        <div data-opens="false" @click="openFacultate" class="items blocks-items">
+            <div class="top">
+              <h3>1. M. V. Lomonosov nomidagi Moskva davlat universiteti</h3>
+              <h3>Fakultetlar:</h3>
+
+            </div>
+            <div class="bottom">
+              <figure></figure>
+              <ul>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+              </ul>
+            </div>
+        </div>
+        <div data-opens="false" @click="openFacultate" class="items blocks-items">
+            <div class="top">
+              <h3>1. M. V. Lomonosov nomidagi Moskva davlat universiteti</h3>
+              <h3>Fakultetlar:</h3>
+
+            </div>
+            <div class="bottom">
+              <figure></figure>
+              <ul>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+              </ul>
+            </div>
+        </div>
+        <div data-opens="false" @click="openFacultate" class="items blocks-items">
+            <div class="top">
+              <h3>1. M. V. Lomonosov nomidagi Moskva davlat universiteti</h3>
+              <h3>Fakultetlar:</h3>
+
+            </div>
+            <div class="bottom">
+              <figure></figure>
+              <ul>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+              </ul>
+            </div>
+        </div>
+        <div data-opens="false" @click="openFacultate" class="items blocks-items">
+            <div class="top">
+              <h3>1. M. V. Lomonosov nomidagi Moskva davlat universiteti</h3>
+              <h3>Fakultetlar:</h3>
+
+            </div>
+            <div class="bottom">
+              <figure></figure>
+              <ul>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+                <li>Metalurgiya</li>
+                <li>Formatevtika</li>
+                <li>Mashinasozlik</li>
+                <li>Texnik</li>
+                <li>Elktrotarmoqlar</li>
+                <li>Buxgalteriya</li>
+              </ul>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
   <main>
     <section class="one-screen">
       <figure class="mobile-logo">
@@ -78,7 +246,7 @@ export default {
               <span>O'qishga <br />
                 kirish</span>
             </div>
-            <div class="items">
+            <div   class="items">
               <span>Grant 2024</span>
             </div>
             <div class="items">
@@ -177,7 +345,7 @@ feedbacks
       </div>
     </section>
     <section class="slider-wrapper">
-      <Swiper/>
+      <Swiper @openmodal="open_univers_popup"/>
     </section>
 
     <section class="questions">
