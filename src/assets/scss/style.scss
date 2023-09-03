@@ -385,7 +385,7 @@ main {
     justify-content: space-between;
     margin: auto;
     .left {
-      max-width: 700px;
+      max-width: 850px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -393,6 +393,13 @@ main {
       p,
       h1 {
         font-family: $m;
+        em{
+          font-style: normal;
+          font-size: 19px;
+          margin-top: -10px;
+          display: block;
+          margin-bottom: 10px;
+        }
       }
       h1 {
         svg {
@@ -401,16 +408,19 @@ main {
         width: max-content;
         color: #0246ff;
         padding-bottom: 10px;
-        border-bottom: 2px solid #0245ff7e;
         margin-bottom: 20px;
         font-size: 45px;
+      }
+      .clas{
+        margin-top: -10px;
+        color: #0044ff;
       }
       p {
         font-size: 20px;
         line-height: 35px;
         svg {
           height: 30px;
-          margin: 10px 8px;
+          margin: 0 8px;
           color: #0246ff;
         }
         span {
@@ -423,7 +433,8 @@ main {
       display: flex;
       padding-top: 60px;
       flex-wrap: wrap;
-      align-content: space-between;
+      // align-content: space-between;
+      align-items: center;
       justify-content: space-between;
       .block {
         height: 188px;
@@ -432,6 +443,7 @@ main {
         background: white;
         box-shadow: 10px 10px 20px rgb(223, 223, 223);
         padding: 40px;
+        padding-bottom: 70px !important;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -439,8 +451,33 @@ main {
         color: black;
         text-align: center;
         font-weight: 700;
+        position: relative;
         font-family: $m;
-        svg {
+        &::after{
+          height: 60px;
+          bottom: 0%;
+          transform: translateY(50%);
+          width: 60px;
+          border-radius: 50%;
+          content: "";
+          background: #0044ff;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 22px;
+        }
+        &:nth-child(1)::after{
+          content: "1";
+        }
+        &:nth-child(2)::after{
+          content: "2";
+        }
+        &:nth-child(3)::after{
+          content: "3";
+        }
+        img {
           color: #0044ff;
           height: 80px;
           margin-bottom: 15px;
@@ -510,6 +547,7 @@ main {
 }
 
 @media screen and (max-width: 450px) {
+  
   .second-screen .wrapper .left p {
     font-size: 13px;
     line-height: 20px;
@@ -955,8 +993,7 @@ footer {
   top: 0;
   z-index: 999;
   display: flex;
-  align-items: center;
-  justify-content: center;
+    justify-content: center;
   padding-top: 50px;
 
   .four-wrapper,
@@ -1239,6 +1276,11 @@ footer {
   .one-screen .wrapper .right {
   }
   .one-screen{
-    max-height: 1200px !important;
+    height: 100%;
+    max-height: 2000px !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .one-screen .wrapper .right{
   }
 }
