@@ -840,7 +840,7 @@ footer {
     display: flex;
     justify-content: space-between;
     color: #0044ff;
-    white-space: nowrap;
+    white-space: wrap;
     opacity: 0;
     span {
       cursor: pointer;
@@ -1030,7 +1030,7 @@ footer {
       span {
         cursor: pointer;
       }
-      white-space: nowrap;
+      white-space: wrap;
       color: #0044ff;
     }
     h3 {
@@ -1039,7 +1039,7 @@ footer {
       opacity: 0;
       margin-top: 10px;
       font-family: $m;
-      white-space: nowrap;
+      white-space: wrap;
       color: #0044ff;
       margin-bottom: -10px;
     }
@@ -1167,7 +1167,7 @@ footer {
         transition-delay: 0s !important;
       }
     }
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
