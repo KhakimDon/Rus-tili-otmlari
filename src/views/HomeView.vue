@@ -472,6 +472,22 @@ DTM test sinovidan o’tkazilib O’zbekiston OTMlariga qabul qilinad`,
     <div class="univers_menu_inner">
       <h2>Rossiyanig eng nufuzli universitetlari.🎓 <span @click="close">&times;</span></h2>
       <div>
+
+        <!-- ` Московского государственного университета имени М.В.Ломоносова`,
+                " Российский университет дружбы народов",
+                "Российский экономический университет имени Г.В. Плеханова",
+                "Национальный исследовательский технологический университет МИСИС",
+                "РГУ нефти и газа (НИУ) имени И.М. Губкина",
+                " Московский государственный строительный университет",
+                "Первый Московский государственный медицинский университет имени И.М. Сеченова",
+                "Московский государственный медико-стоматологический университетим.А.И.Евдокимова",
+                "Московский авиационный институт",
+                "Казанский федеральный университет",
+                "Санкт-Петербургский государственный университет гражданской авиации",
+                "Высшая школа экономики» (НИУ ВШЭ)",
+                "Первый Санкт-Петербургский государственный медицинский университет имени академика И. П. Павлова", -->
+
+
         <div data-opens="false" @click="openFacultate" class="items blocks-items">
           <div class="top">
             <h3>1. M. V. Lomonosov nomidagi Moskva davlat universiteti</h3>
@@ -481,42 +497,41 @@ DTM test sinovidan o’tkazilib O’zbekiston OTMlariga qabul qilinad`,
           <div class="bottom">
             <figure></figure>
             <ul>
-              <li>Metalurgiya</li>
-              <li>Formatevtika</li>
-              <li>Mashinasozlik</li>
-              <li>Texnik</li>
-              <li>Elktrotarmoqlar</li>
-              <li>Buxgalteriya</li>
-              <li>Metalurgiya</li>
-              <li>Formatevtika</li>
-              <li>Mashinasozlik</li>
-              <li>Texnik</li>
-              <li>Elktrotarmoqlar</li>
-              <li>Buxgalteriya</li>
+              <li>Mexanika-matematika</li>
+              <li>Kibernetika</li>
+              <li>Fizika</li>
+              <li>Kimyo</li>
+              <li>Materiallar fanlari</li>
+              <li>Biologiya </li>
+              <li>Bioinjeneriya </li>
+              <li>Bioinformatika </li>
+              <li>Tuproqshunoslik </li>
+              <li>Geologiya </li>
+              <li>Geografiya </li>
+              <li>Asosiy tibbiyot </li>
             </ul>
           </div>
         </div>
         <div data-opens="false" @click="openFacultate" class="items blocks-items">
           <div class="top">
-            <h3>1. M. V. Lomonosov nomidagi Moskva davlat universiteti</h3>
-            <h3>Fakultetlar:</h3>
+            <h3>2.Rossiya xalqlar do'stligi universiteti</h3>
 
           </div>
           <div class="bottom">
-            <figure></figure>
+            <figure class="mu"></figure>
             <ul>
-              <li>Metalurgiya</li>
+              <li>O'simliklar biotexnologiyasi</li>
+              <li>Agrobiotexnologiya</li>
+              <li>Ginekologiya</li>
+              <li>Akusherlik va ginekologiya</li>
+              <li>Allergologiya va immunologiya</li>
+              <li>Inson anatomiyasi</li>
+              <li>Anesteziologiya  - reanimatologiya</li>
               <li>Formatevtika</li>
-              <li>Mashinasozlik</li>
-              <li>Texnik</li>
-              <li>Elktrotarmoqlar</li>
-              <li>Buxgalteriya</li>
-              <li>Metalurgiya</li>
-              <li>Formatevtika</li>
-              <li>Mashinasozlik</li>
-              <li>Texnik</li>
-              <li>Elktrotarmoqlar</li>
-              <li>Buxgalteriya</li>
+              <li>Arxitektura</li>
+              <li>Biznes informatika</li>
+              <li>Kibernetika</li>
+              <li>Geografiya</li>
             </ul>
           </div>
         </div>

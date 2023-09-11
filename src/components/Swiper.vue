@@ -5,41 +5,41 @@
         <swiper-slide>
             <div class="rotate-block"></div>
             <div class="content">
-                <h2>Moskva davlat M. V. Lomonosov <br> nomidagi Universitet  </h2>
+                <h2>Rossiya xalqlar do'stligi universiteti</h2>
                 <p>
-                    Rossiyaning eng qadimgi va eng yirik klassik universitetlaridan biri, Moskvada joylashgan Rossiya fan va madaniyati markazlaridan biri. 1940 yildan Mixail Vasilievich Lomonosov nomini olgan
+                    KPSS Markaziy komiteti va SSSR Ministrlar Sovetining 1960 — yil 5-fevraldagi qarori bilan xalqlar do'stligi universiteti sifatida ta'sis etilgan, 1961-yil 22-fevralda Patris Lumumba nomi bilan atalgan, 1992-yil 5-fevraldan Rossiya xalqlar do'stligi universiteti.
                 </p>
-                <button @click="emits()">Batafsil</button>
+                <button class="btnbtnbtn" @click="emits()">Barcha Universitetlar</button>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="rotate-block"></div>
             <div class="content">
-                <h2>Lorem ipsum dolor sit Lorem, <br> ipsum dolor</h2>
+                <h2>G.V.Plexanov nomidagi Rossiya <br> iqtisodiyot universiteti</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio amet culpa voluptate, fuga iure? Tempore sunt animi sed saepe et, dicta magni beatae veniam corporis sit ipsam eos soluta eveniet consectetur inventore? Minima ipsa quidem, assumenda veniam asperiores numquam.
+                    1907 yilda tadbirkor Aleksey Vishnyakov tomonidan Rossiya imperiyasida tijorat ta'limini tarqatish bo'yicha birinchi ixtisoslashtirilgan oliy o'quv yurti sifatida tashkil etilgan. Bugungi kunda bu iqtisodiyot, tovarshunoslik va texnologiya sohasida yuqori malakali mutaxassislarni tayyorlash bo'yicha eng yirik o'quv va ilmiy markazdir.
                 </p>
-                <button>click this</button>
+                <button class="btnbtnbtn" @click="emits()">Barcha Universitetlar</button>   
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="rotate-block"></div>
             <div class="content">
-                <h2>Lorem ipsum dolor sit Lorem,<br>  ipsum dolor</h2>
+                <h2>M.V.Lomonosov nomidagi <br> Moskva davlat universiteti</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio amet culpa voluptate, fuga iure? Tempore sunt animi sed saepe et, dicta magni beatae veniam corporis sit ipsam eos soluta eveniet consectetur inventore? Minima ipsa quidem, assumenda veniam asperiores numquam.
+                    1940 yildan Mixail Vasilievich Lomonosov nomini olgan. To'liq nomi - "M. V. Lomonosov nomidagi Moskva davlat universiteti"federal davlat byudjet oliy ta'lim muassasasi.
                 </p>
-                <button>click this</button>
+                <button class="btnbtnbtn" @click="emits()">Barcha Universitetlar</button>   
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="rotate-block"></div>
             <div class="content">
-                <h2>Lorem ipsum dolor sit Lorem, <br> ipsum dolor</h2>
+                <h2>I. M. Gubkin nomidagi <br> neft va gaz RGU (NIU) </h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio amet culpa voluptate, fuga iure? Tempore sunt animi sed saepe et, dicta magni beatae veniam corporis sit ipsam eos soluta eveniet consectetur inventore? Minima ipsa quidem, assumenda veniam asperiores numquam.
+                    1930 yilda tashkil etilgan, 1945 yilda mehnat qizil bayrog'i ordeni, 1980 yilda oktyabr inqilobi ordeni, 2000 yilda Vetnam Sotsialistik Respublikasi xalqlari do'stligi ordeni, 2010 yilda Vetnam Sotsialistik Respublikasining III darajali mehnat ordeni, 2017 yilda <b>O'zbekiston Respublikasi</b> Do'stlik ordeni bilan mukofotlangan.
                 </p>
-                <button>click this</button>
+                <button class="btnbtnbtn" @click="emits()">Barcha Universitetlar</button>   
             </div>
         </swiper-slide>
     </swiper>
@@ -77,3 +77,10 @@ export default {
 };
 </script>
   
+
+<style>
+.btnbtnbtn{
+    width: max-content !important;
+    padding: 0px 13px;
+}
+</style>

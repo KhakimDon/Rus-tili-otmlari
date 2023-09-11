@@ -32,20 +32,20 @@
 
 .swiper-slide:nth-child(1) {
   background-attachment: fixed !important;
-  background-image: url("https://funart.pro/uploads/posts/2019-11/1573380230_mgu-universitet-rossija-25.jpg");
+  background-image: url("./универы/1.png");
 }
 .swiper-slide:nth-child(2) {
   background-attachment: fixed !important;
-  background-image: url("https://s2.stc.all.kpcdn.net/putevoditel/projectid_534672/images/tild6635-6230-4532-b061-366534646166__photo.jpg");
+  background-image: url("./универы/2.png");
 }
 .swiper-slide:nth-child(3) {
   background-attachment: fixed !important;
-  background-image: url("https://chronicles.igmsu.org/wp-content/uploads/2016/08/2gum.jpg");
+  background-image: url("./универы/3.jpg");
 }
 
 .swiper-slide:nth-child(4) {
   background-attachment: fixed !important;
-  background-image: url("https://avatars.mds.yandex.net/get-altay/2786941/2a00000172403bac6b37c94b364b70e45c1c/XXL_height");
+  background-image: url("./универы/4.png");
 }
 
 .swiper-slide::after {
